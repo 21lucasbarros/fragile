@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
 
 type Page = "home" | "login" | "register" | "dashboard";
 
@@ -16,6 +17,7 @@ export default function App() {
           goToDashboard={() => setPage("dashboard")}
         />
       )}
+      {page === "dashboard" && <Dashboard goToHome={() => setPage("home")} />}
     </div>
   );
 }
