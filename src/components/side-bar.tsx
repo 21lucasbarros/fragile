@@ -24,7 +24,7 @@ export default function Sidebar({ goToHome }: SidebarProps) {
         </div>
       </div>
 
-      <nav className="flex-1 p-5 space-y-2 mt-8">
+      <nav className="flex-1 p-5 space-y-2 mt-5">
         <div className="flex flex-col gap-4">
           <h3 className="text-[13px] text-gray-300 uppercase tracking-wide">
             DASHBOARD

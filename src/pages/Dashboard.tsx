@@ -1,4 +1,5 @@
 import Sidebar from "@/components/side-bar";
+import { Button } from "@/components/ui/button";
 
 interface DashboardProps {
   goToHome: () => void;
@@ -9,10 +10,15 @@ export default function Dashboard({ goToHome }: DashboardProps) {
     <div className="flex h-screen w-full bg-[#1a1a1a] text-white">
       <Sidebar goToHome={goToHome} />
       <main className="flex-1 p-6">
-        <h1 className="text-2xl font-bold">Dashboard</h1>
-        <p className="mt-2 text-gray-400">
-          Bem-vindo ao seu gerenciador de senhas.
-        </p>
+        <header className="flex flex-row justify-between">
+          <h1 className="text-2xl font-bold">Dashboard</h1>
+          <Button
+            variant="outline"
+            className="text-zinc-900 hover:bg-zinc-700 hover:text-zinc-100"
+          >
+            Add Password
+          </Button>
+        </header>
       </main>
     </div>
   );
