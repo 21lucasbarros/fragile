@@ -11,10 +11,23 @@ import {
 import { Button } from "./button";
 import { Label } from "./label";
 import { Input } from "./input";
+import { useEffect, useState } from "react";
+import { listen } from "@tauri-apps/api/event";
 
-export default function ModalDashboard() {
+export default function ModalPassword() {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const unlisten = listen("open-password-modal", () => {
+      setOpen(true);
+    });
+    return () => {
+      unlisten.then((f: () => void) => f());
+    };
+  }, []);
+
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <form>
         <DialogTrigger asChild>
           <Button

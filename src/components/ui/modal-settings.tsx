@@ -100,13 +100,13 @@ export default function ModalSettings() {
             <div className="flex items-center justify-between">
               <span>Open/Close app</span>
               <kbd className="rounded bg-muted px-2 py-1 text-sm">
-                Ctrl + Shift + S / ⌘ + Shift + S
+                Ctrl + N / ⌘ + N
               </kbd>
             </div>
             <div className="flex items-center justify-between">
               <span>New password</span>
               <kbd className="rounded bg-muted px-2 py-1 text-sm">
-                Ctrl + N / ⌘ + N
+                Ctrl + P / ⌘ + P
               </kbd>
             </div>
             <div className="flex items-center justify-between">

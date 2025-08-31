@@ -3,7 +3,6 @@ import {
   Key,
   LockKeyhole,
   LogOut,
-  Settings,
   Share,
   Shield,
   Star,
@@ -49,7 +48,7 @@ export default function Sidebar({ goToHome }: SidebarProps) {
           </h3>
           <Button variant="ghost" className="justify-start text-white">
             <Key />
-            <span>Password Generator</span>
+            <span>Generator</span>
           </Button>
           <Button variant="ghost" className="justify-start text-white">
             <Shield />
