@@ -8,8 +8,9 @@ import {
   Shield,
   Star,
 } from "lucide-react";
-import GradientIcon from "./ui/gradientIcon";
+import GradientIcon from "./ui/gradient-icon";
 import { Button } from "./ui/button";
+import ModalSettings from "./ui/modal-settings";
 
 interface SidebarProps {
   goToHome: () => void;
@@ -29,24 +30,15 @@ export default function Sidebar({ goToHome }: SidebarProps) {
           <h3 className="text-[13px] text-gray-300 uppercase tracking-wide">
             DASHBOARD
           </h3>
-          <Button
-            variant="ghost"
-            className="justify-start text-white hover:bg-gray-700"
-          >
+          <Button variant="ghost" className="justify-start text-white">
             <Home />
             <span>Overview</span>
           </Button>
-          <Button
-            variant="ghost"
-            className="justify-start text-white hover:bg-gray-700"
-          >
+          <Button variant="ghost" className="justify-start text-white">
             <LockKeyhole />
             <span>All Passwords</span>
           </Button>
-          <Button
-            variant="ghost"
-            className="justify-start text-white hover:bg-gray-700"
-          >
+          <Button variant="ghost" className="justify-start text-white">
             <Star />
             <span>Favorites</span>
           </Button>
@@ -55,17 +47,11 @@ export default function Sidebar({ goToHome }: SidebarProps) {
           <h3 className="text-[13px] text-gray-300 uppercase tracking-wide">
             SECURITY
           </h3>
-          <Button
-            variant="ghost"
-            className="justify-start text-white hover:bg-gray-700"
-          >
+          <Button variant="ghost" className="justify-start text-white">
             <Key />
             <span>Password Generator</span>
           </Button>
-          <Button
-            variant="ghost"
-            className="justify-start text-white hover:bg-gray-700"
-          >
+          <Button variant="ghost" className="justify-start text-white">
             <Shield />
             <span>Security Check</span>
           </Button>
@@ -74,17 +60,8 @@ export default function Sidebar({ goToHome }: SidebarProps) {
           <h3 className="text-[13px] text-gray-300 uppercase tracking-wide">
             PROFILE
           </h3>
-          <Button
-            variant="ghost"
-            className="justify-start text-white hover:bg-gray-700"
-          >
-            <Settings />
-            <span>Settings</span>
-          </Button>
-          <Button
-            variant="ghost"
-            className="justify-start text-white hover:bg-gray-700"
-          >
+          <ModalSettings />
+          <Button variant="ghost" className="justify-start text-white">
             <Share />
             <span>Export Data</span>
           </Button>
