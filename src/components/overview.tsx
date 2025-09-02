@@ -1,8 +1,8 @@
-import { Lock, Notebook, Shield, TriangleAlert } from "lucide-react";
+import { Lock, Notebook, TriangleAlert } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { ScrollArea } from "./ui/scroll-area";
 import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
+import { Progress } from "./ui/progress";
 
 const activities = [
   { id: 1, text: "New password added - Gmail", type: "success", label: "New" },
@@ -83,11 +83,11 @@ export default function Overview() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Secutiry Score</CardTitle>
+            <CardTitle>Security Score</CardTitle>
           </CardHeader>
-          <CardContent className="flex items-center justify-between">
-            <p className="text-2xl font-bold">78%</p>
-            <TriangleAlert className="text-green-500" />
+          <CardContent>
+            <p className="text-2xl font-bold text-green-600">78%</p>
+            <Progress value={78} className="mt-2" />
           </CardContent>
         </Card>
       </div>
